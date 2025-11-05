@@ -78,7 +78,7 @@ class VoiceInput:
         retry_count = 0
         
         while retry_count < max_retries:
-            print("Hold SPACE to speak... release to stop and transcribe.")
+            print("Hold Alt+A to speak... release to stop and transcribe.")
             if retry_count > 0:
                 print(f"Retry {retry_count}/{max_retries}")
             print("Press ESC to cancel.\n")
@@ -90,7 +90,7 @@ class VoiceInput:
                     print("Cancelled.")
                     return None
 
-                if keyboard.is_pressed("space"):
+                if keyboard.is_pressed("alt+a"):
                     print("Listening...")
                     with self.microphone as source:
                         self.recognizer.adjust_for_ambient_noise(source, duration=0.5)
@@ -116,7 +116,7 @@ class VoiceInput:
                             print(f"Recognition service error: {e}")
                             return None
                         finally:
-                            while keyboard.is_pressed("space"):
+                            while keyboard.is_pressed("alt+a"):
                                 time.sleep(0.01)
         
         print(f"Failed after {max_retries} attempts.")
