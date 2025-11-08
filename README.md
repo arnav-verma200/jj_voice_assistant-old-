@@ -2,6 +2,13 @@
 
 A powerful voice-controlled browser automation assistant that lets you control Spotify, send WhatsApp messages, play YouTube videos, and browse the web using simple voice commands or text input.
 
+
+
+#this repo is kinda not working so pls reffer to new repo on my profile under same name :)
+
+
+
+
 ## ✨ Features
 
 - 🎵 **Spotify Control** - Play songs, control playback (pause, next, previous)
